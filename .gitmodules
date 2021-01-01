@@ -2,3 +2,6 @@
 	path = thirdparty/blade-build
 	url = https://github.com/repository-archives/blade-build.git
   branch = legacy
+[submodule "thirdparty/cpplint"]
+	path = thirdparty/cpplint
+	url = https://github.com/Liam0205/cpplint.git
