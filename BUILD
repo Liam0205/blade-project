@@ -1,6 +1,6 @@
 gen_rule (
-    name = 'all',
-    deps = [
-    ]
+  name = 'all',
+  deps = [
+    '//test:all',
+  ]
 )
-
