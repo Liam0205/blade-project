@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # =========================================================================
-# Copyright 2018 -- present Liam Huang (Yuuki) [liamhuang0205@gmail.com].
+# Copyright 2021 -- present Liam Huang (Yuuki) [liamhuang0205@gmail.com].
 # Author: Liam Huang
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,7 +30,7 @@ COLOR_NONE="\033[0m"
 
 if [ "${1}x" = "testx" ]; then
   shift
-  PROJ_NAME="yuuki"
+  PROJ_NAME="test"
   BUILD_DIR="blade-bin"
   if [ ${#} -gt 0 ]; then
     TESTS=${@}
