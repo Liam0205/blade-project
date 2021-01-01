@@ -15,11 +15,7 @@
 // limitations under the License.
 // =========================================================================
 
-#include <catch.h>
+#pragma once
 
-#include <string>
-
-TEST_CASE("hello world") {
-  static constexpr const char* hello = "hello world";
-  REQUIRE(hello == std::string(hello));
-}
+#define CATCH_CONFIG_MAIN
+#include <Catch2/single_include/catch2/catch.hpp>
