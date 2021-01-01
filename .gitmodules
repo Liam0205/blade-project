@@ -1,0 +1,4 @@
+[submodule "thirdparty/blade-build"]
+	path = thirdparty/blade-build
+	url = https://github.com/repository-archives/blade-build.git
+  branch = legacy
