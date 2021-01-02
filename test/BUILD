@@ -1,13 +1,13 @@
 gen_rule (
   name = 'all',
   deps = [
-    ':hello_world',
+    ':fibonacci',
   ]
 )
 
 cc_binary(
-  name = 'hello_world',
+  name = 'fibonacci',
   srcs = [
-    'hello_world.cc',
+    'fibonacci.cc',
   ],
 )

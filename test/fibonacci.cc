@@ -17,9 +17,30 @@
 
 #include <catch.h>
 
-#include <string>
+#include <cstdint>
 
-TEST_CASE("hello world") {
-  static constexpr const char* hello = "hello world";
-  REQUIRE(hello == std::string(hello));
+std::uint64_t Fibonacci(std::uint64_t number) {
+  return number < 2 ? 1 : Fibonacci(number - 1) + Fibonacci(number - 2);
+}
+
+TEST_CASE("Fibonacci") {
+  REQUIRE(Fibonacci(0) == 1);
+  REQUIRE_FALSE(Fibonacci(5) == 7);  // actural should be `8`.
+
+  // now let's benchmark:
+  BENCHMARK("Fibonacci 10") {
+    return Fibonacci(10);
+  };
+
+  BENCHMARK("Fibonacci 25") {
+    return Fibonacci(25);
+  };
+
+  BENCHMARK("Fibonacci 30") {
+    return Fibonacci(30);
+  };
+
+  BENCHMARK("Fibonacci 35") {
+    return Fibonacci(35);
+  };
 }
